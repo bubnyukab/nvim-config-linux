@@ -29,7 +29,7 @@ lua/plugins/
 ├── filetree.lua                neo-tree
 ├── git.lua                     fugitive + gitsigns
 ├── lang.lua                    go.nvim, gopher.nvim, swagger-preview
-├── testing.lua                 vim-test
+├── testing.lua                 vim-test + vimux (runs tests in a tmux pane)
 ├── ui.lua                      telescope, lualine, bufferline, which-key, alpha
 └── configs/
     ├── cmp.lua                 completion mappings + sources
@@ -110,7 +110,10 @@ Leader = `<Space>`. Modes: **n** normal, **i** insert, **v** visual.
 | `<leader>gb`   | Gitsigns: blame line    |
 | `:G`, `:Gdiffsplit`, … | Fugitive porcelain |
 
-### Tests (vim-test)
+### Tests (vim-test + vimux)
+
+Tests run via vimux in a tmux pane next to nvim (must be inside a tmux session).
+
 
 | Key            | Action         |
 | -------------- | -------------- |
