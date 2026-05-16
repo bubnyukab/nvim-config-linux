@@ -17,7 +17,7 @@ conform.setup({
     markdown = { "prettier" },
 
     -- Go: organize imports → gofumpt (stricter gofmt) → golines (wrap long lines)
-    go = { "goimports_reviser", "gofumpt", "golines" },
+    go = { "goimports-reviser", "gofumpt", "golines" },
 
     rust = { "rustfmt" },
 
