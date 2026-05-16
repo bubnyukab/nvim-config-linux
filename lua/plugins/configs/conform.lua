@@ -18,11 +18,6 @@ conform.setup({
 
     -- Go: organize imports → gofumpt (stricter gofmt) → golines (wrap long lines)
     go = { "goimports-reviser", "gofumpt", "golines" },
-
-    rust = { "rustfmt" },
-
-    -- Ruby (disabled — re-enable alongside Mason entries when needed)
-    -- ruby = { "rubocop" },
   },
 
   -- Format every save. LSP formatting still runs as a fallback for filetypes

@@ -1,12 +1,2 @@
 -- Per-machine / per-project plugin overrides go here.
---
--- Re-enable Ruby tooling (solargraph LSP + rubocop formatter):
---   1. Uncomment "solargraph" in configs/mason.lua  (ensure_installed)
---   2. Uncomment "rubocop"    in configs/mason.lua  (tools list)
---   3. Uncomment solargraph = {} in configs/lspconfig.lua
---   4. Uncomment the `ruby = { "rubocop" }` line in configs/conform.lua
---   Requires `ruby` + `gem` on PATH so Mason can build the gems.
---
--- For Ruby diagnostics/linting (separate from formatting):
---   Add `mfussenegger/nvim-lint` and configure it for `ruby = { "rubocop" }`.
 return {}

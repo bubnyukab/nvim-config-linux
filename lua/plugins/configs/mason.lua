@@ -5,9 +5,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "ts_ls",
     "html",
-    "rust_analyzer",
     "gopls",
-    -- "solargraph", -- Ruby: re-enable if working on a Ruby project (requires ruby+gem on PATH)
   },
   automatic_installation = true,
 })
@@ -24,10 +22,6 @@ if ok then
     "goimports-reviser",
     "golines",
     "delve",
-    "rustfmt",
-    -- Ruby (disabled — needs ruby+gem to build):
-    -- "rubocop",
-    -- "erb-lint",
   }
   registry.refresh(function()
     for _, tool in ipairs(tools) do

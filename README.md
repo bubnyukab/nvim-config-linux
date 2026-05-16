@@ -13,7 +13,6 @@ External requirements:
 
 - `git`, `ripgrep` (for Telescope live-grep), a Nerd Font (for icons)
 - `go` toolchain (for go.nvim / gopher.nvim / delve)
-- `cargo` (for rust-analyzer / crates.nvim)
 - `node` (for prettier and TS servers via Mason)
 
 ## Layout
@@ -22,9 +21,9 @@ External requirements:
 init.lua                        bootstrap, options, leader, lazy.setup("plugins")
 lua/plugins/
 ├── init.lua                    plenary, vim-tmux-navigator
-├── code.lua                    LSP, conform, treesitter, cmp, autopairs, crates, Comment
+├── code.lua                    LSP, conform, treesitter, cmp, autopairs, Comment
 ├── colorscheme.lua             gruvbox (active), catppuccin (fallback)
-├── custom.lua                  per-machine overrides (Ruby re-enable instructions)
+├── custom.lua                  per-machine overrides (empty placeholder)
 ├── dap.lua                     nvim-dap + dap-ui + dap-go
 ├── edit.lua                    vim-sleuth, trim.nvim, oil.nvim
 ├── filetree.lua                neo-tree
@@ -46,7 +45,6 @@ lua/plugins/
 - Formatting is owned by **conform.nvim** (not none-ls). Format-on-save is enabled; `<leader>lf` is the manual key. LSP formatting is a fallback for filetypes without a configured formatter.
 - Go imports are organized by `goimports-reviser` via conform — `go.nvim`'s own BufWritePre hook is intentionally not configured (would double-format).
 - Mason auto-installs both LSP servers (via mason-lspconfig `ensure_installed`) and CLI tools (formatters/debuggers, via a `mason-registry` loop in `configs/mason.lua`).
-- Ruby tooling (solargraph + rubocop) is **disabled** — see comments in `lua/plugins/custom.lua` for re-enable steps.
 
 ## Editor options (from `init.lua`)
 
@@ -164,11 +162,5 @@ Additional Go commands available as `:Go*` from `ray-x/go.nvim` (e.g. `:GoFillSt
 | --------- | ---- | ---------------------------- |
 | `gcc`     | n    | Toggle comment on line       |
 | `gc`      | v    | Toggle comment on selection  |
-
----
-
-## Re-enabling Ruby tooling
-
-See `lua/plugins/custom.lua` for the checklist — uncomment entries in `configs/mason.lua`, `configs/lspconfig.lua`, and `configs/conform.lua`. Requires `ruby` and `gem` on `PATH` so Mason can build the gems.
 
 [lazy.nvim]: https://github.com/folke/lazy.nvim

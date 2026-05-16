@@ -61,15 +61,6 @@ return {
     end,
   },
 
-  -- Rust Cargo.toml dependency management
-  {
-    "saecki/crates.nvim",
-    event = { "BufRead Cargo.toml" },
-    config = function()
-      require("crates").setup()
-    end,
-  },
-
   -- Comment toggling (gcc / gc in visual)
   {
     "numToStr/Comment.nvim",

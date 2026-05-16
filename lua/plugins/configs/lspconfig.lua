@@ -25,10 +25,8 @@ local servers = {
       },
     },
   },
-  ts_ls         = {},
-  html          = {},
-  -- solargraph = {}, -- Ruby LSP, re-enable when needed
-  rust_analyzer = {},
+  ts_ls = {},
+  html  = {},
   gopls = {
     -- Detect Go module / workspace / repo root
     root_markers = { "go.work", "go.mod", ".git" },
