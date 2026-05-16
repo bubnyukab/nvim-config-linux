@@ -12,6 +12,7 @@ return {
         close_if_last_window = true,
         window = { width = 30 },
         filesystem = {
+          follow_current_file = { enabled = true, leave_dirs_open = true },
           filtered_items = {
             visible = false,
             hide_dotfiles = false,
@@ -19,7 +20,7 @@ return {
           },
         },
       })
-      vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle left<cr>", { desc = "Toggle file tree" })
+      vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle reveal left<cr>", { desc = "Toggle file tree (reveal current file)" })
       vim.keymap.set("n", "<leader>bf", "<cmd>Neotree float<cr>", { desc = "Float file tree" })
     end,
   },
