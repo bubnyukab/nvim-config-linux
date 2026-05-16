@@ -22,4 +22,27 @@ return {
       vim.keymap.set("n", "-", "<cmd>Oil --float<cr>", { desc = "Open oil file browser" })
     end,
   },
+
+  -- Fast in-buffer motion: press `s` then 2 chars to jump anywhere visible.
+  -- `S` works in operator-pending too (e.g. `dS` to delete to a target).
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,       desc = "Flash" },
+      { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,     desc = "Toggle Flash Search" },
+    },
+  },
+
+  -- Change/add/delete surrounding pairs: `ysiw)` wraps word in parens, `cs"'` swaps quotes, `ds(` deletes.
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
 }

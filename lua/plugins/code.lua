@@ -69,4 +69,19 @@ return {
     end,
   },
 
+  -- Diagnostics / references / quickfix in a single tree-style panel.
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = "Trouble",
+    opts = {},
+    keys = {
+      { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>",                       desc = "Trouble: workspace diagnostics" },
+      { "<leader>xb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",          desc = "Trouble: buffer diagnostics" },
+      { "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>",               desc = "Trouble: document symbols" },
+      { "<leader>xr", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",desc = "Trouble: LSP refs/defs/impls" },
+      { "<leader>xq", "<cmd>Trouble qflist toggle<cr>",                            desc = "Trouble: quickfix" },
+    },
+  },
+
 }

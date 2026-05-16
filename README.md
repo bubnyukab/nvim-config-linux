@@ -82,9 +82,30 @@ Leader = `<Space>`. Modes: **n** normal, **i** insert, **v** visual.
 | `<C-p>`              | Find files                      |
 | `<leader>fg`         | Live grep                       |
 | `<leader><leader>`   | Recent files                    |
+| `<leader>bb`         | Open buffers                    |
 | `<leader>fh`         | Help tags                       |
 | `<leader>fb`         | File browser (telescope ext)    |
 | `<leader>fn`         | Browse current buffer's dir     |
+
+### Motion / editing
+
+| Key             | Mode    | Action                                       |
+| --------------- | ------- | -------------------------------------------- |
+| `s{c}{c}`       | n,x,o   | Flash jump to any visible 2-char match       |
+| `S`             | n,x,o   | Flash Treesitter (jump to syntactic nodes)   |
+| `ys{motion}{c}` | n       | nvim-surround: add surround (e.g. `ysiw)`)   |
+| `cs{a}{b}`      | n       | Change surround (e.g. `cs"'`)                |
+| `ds{c}`         | n       | Delete surround (e.g. `ds(`)                 |
+
+### Trouble (diagnostics / refs)
+
+| Key           | Action                                  |
+| ------------- | --------------------------------------- |
+| `<leader>xx`  | Workspace diagnostics                   |
+| `<leader>xb`  | Buffer diagnostics                      |
+| `<leader>xs`  | Document symbols                        |
+| `<leader>xr`  | LSP references / defs / impls (split)   |
+| `<leader>xq`  | Quickfix list                           |
 
 ### File trees
 

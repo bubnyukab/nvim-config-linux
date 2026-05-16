@@ -31,6 +31,7 @@ return {
       vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
       vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, { desc = "Recent files" })
+      vim.keymap.set("n", "<leader>bb", builtin.buffers, { desc = "Open buffers" })
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
       vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", { desc = "File browser" })
       vim.keymap.set("n", "<leader>fn", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", { desc = "Browse current dir" })
@@ -88,6 +89,7 @@ return {
         { "<leader>b",  group = "Buffer" },
         { "<leader>t",  group = "Test" },
         { "<leader>d",  group = "Debug" },
+        { "<leader>x",  group = "Trouble" },
         { "<leader>dg", group = "Debug Go" },
         { "<leader>dp", group = "Debug Python" },
         { "<leader>du", group = "Debug UI" },
@@ -123,5 +125,13 @@ return {
 
       alpha.setup(dashboard.config)
     end,
+  },
+
+  -- Inline markdown rendering: headings, code blocks, lists styled in the buffer.
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {},
   },
 }
