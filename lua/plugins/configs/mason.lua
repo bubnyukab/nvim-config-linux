@@ -4,8 +4,10 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
     "ts_ls",
+    "eslint",
     "html",
     "gopls",
+    "pyright",
   },
   automatic_installation = true,
 })
@@ -22,6 +24,9 @@ if ok then
     "goimports-reviser",
     "golines",
     "delve",
+    -- Python: formatter + linter (ruff) + debugger (debugpy)
+    "ruff",
+    "debugpy",
   }
   registry.refresh(function()
     for _, tool in ipairs(tools) do

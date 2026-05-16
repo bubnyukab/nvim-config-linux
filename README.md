@@ -13,7 +13,8 @@ External requirements:
 
 - `git`, `ripgrep` (for Telescope live-grep), a Nerd Font (for icons)
 - `go` toolchain (for go.nvim / gopher.nvim / delve)
-- `node` (for prettier and TS servers via Mason)
+- `node` (for prettier, ts_ls, eslint via Mason)
+- `python3` on PATH (Mason installs ruff, pyright, debugpy)
 
 ## Layout
 
@@ -123,6 +124,8 @@ Tests run via vimux in a tmux pane next to nvim (must be inside a tmux session).
 | `<leader>dus`   | Toggle DAP UI (scopes sidebar)          |
 | `<leader>dgt`   | Go: debug nearest test                  |
 | `<leader>dgl`   | Go: debug last test                     |
+| `<leader>dpt`   | Python: debug nearest test method       |
+| `<leader>dpc`   | Python: debug test class                |
 
 ### Go (gopher.nvim struct tags)
 

@@ -39,4 +39,19 @@ return {
         { desc = "DAP-Go: debug last test" })
     end,
   },
+
+  -- Python DAP adapter (debugpy via Mason). Uses Mason's bundled python by default.
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = { "mfussenegger/nvim-dap" },
+    config = function()
+      local mason_python = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(mason_python)
+      vim.keymap.set("n", "<leader>dpt", function() require("dap-python").test_method()  end,
+        { desc = "DAP-Python: debug nearest test method" })
+      vim.keymap.set("n", "<leader>dpc", function() require("dap-python").test_class()   end,
+        { desc = "DAP-Python: debug test class" })
+    end,
+  },
 }

@@ -25,8 +25,20 @@ local servers = {
       },
     },
   },
-  ts_ls = {},
-  html  = {},
+  ts_ls   = {},
+  eslint  = {},
+  html    = {},
+  pyright = {
+    settings = {
+      python = {
+        analysis = {
+          typeCheckingMode = "basic",
+          autoSearchPaths = true,
+          useLibraryCodeForTypes = true,
+        },
+      },
+    },
+  },
   gopls = {
     -- Detect Go module / workspace / repo root
     root_markers = { "go.work", "go.mod", ".git" },

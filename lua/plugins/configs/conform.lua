@@ -18,6 +18,9 @@ conform.setup({
 
     -- Go: organize imports → gofumpt (stricter gofmt) → golines (wrap long lines)
     go = { "goimports-reviser", "gofumpt", "golines" },
+
+    -- Python: ruff handles both import sorting and formatting (replaces isort + black)
+    python = { "ruff_organize_imports", "ruff_format" },
   },
 
   -- Format every save. LSP formatting still runs as a fallback for filetypes

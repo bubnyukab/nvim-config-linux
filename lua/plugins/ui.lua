@@ -89,6 +89,7 @@ return {
         { "<leader>t",  group = "Test" },
         { "<leader>d",  group = "Debug" },
         { "<leader>dg", group = "Debug Go" },
+        { "<leader>dp", group = "Debug Python" },
         { "<leader>du", group = "Debug UI" },
       })
     end,

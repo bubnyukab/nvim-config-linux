@@ -3,6 +3,7 @@ require("nvim-treesitter.configs").setup({
     "lua", "vim", "vimdoc",
     "javascript", "typescript", "tsx",
     "go", "gomod",
+    "python",
     "html", "css", "json", "yaml",
     "markdown", "markdown_inline",
     "bash",
