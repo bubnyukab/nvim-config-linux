@@ -30,7 +30,7 @@ lua/plugins/
 ├── git.lua                     fugitive + gitsigns
 ├── lang.lua                    go.nvim, gopher.nvim, swagger-preview
 ├── testing.lua                 vim-test + vimux (runs tests in a tmux pane)
-├── ui.lua                      telescope, lualine, bufferline, which-key, alpha
+├── ui.lua                      telescope, lualine, which-key, alpha
 └── configs/
     ├── cmp.lua                 completion mappings + sources
     ├── conform.lua             format-on-save, formatter chains per filetype
@@ -92,15 +92,6 @@ Leader = `<Space>`. Modes: **n** normal, **i** insert, **v** visual.
 | `<C-n>`        | Toggle Neo-tree (left sidebar)         |
 | `<leader>bf`   | Neo-tree as floating window            |
 | `-`            | Open Oil file browser (floating)       |
-
-### Buffers / tabs
-
-| Key            | Action               |
-| -------------- | -------------------- |
-| `<Tab>`        | Next buffer          |
-| `<S-Tab>`      | Previous buffer      |
-| `<leader>bd`   | Delete buffer        |
-| `<leader>bp`   | Pin buffer           |
 
 ### Git
 

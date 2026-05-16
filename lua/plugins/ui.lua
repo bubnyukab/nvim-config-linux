@@ -74,37 +74,6 @@ return {
   -- Icons
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
-  -- Tabline: one tab per open buffer, with LSP diagnostics dots and filetype icons.
-  {
-    "akinsho/bufferline.nvim",
-    version = "*",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "VeryLazy",
-    config = function()
-      require("bufferline").setup({
-        options = {
-          mode = "buffers",
-          diagnostics = "nvim_lsp",
-          diagnostics_indicator = function(count, level)
-            local icon = level:match("error") and " " or " "
-            return " " .. icon .. count
-          end,
-          show_buffer_close_icons = false,
-          show_close_icon = false,
-          separator_style = "slant",
-          offsets = {
-            { filetype = "neo-tree", text = "File Explorer", text_align = "center", separator = true },
-          },
-        },
-      })
-      -- Buffer cycling
-      vim.keymap.set("n", "<Tab>",   "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
-      vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
-      vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>",          { desc = "Delete buffer" })
-      vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Pin buffer" })
-    end,
-  },
-
   -- Keybinding popup
   {
     "folke/which-key.nvim",
